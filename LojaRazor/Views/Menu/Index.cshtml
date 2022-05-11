@@ -1,0 +1,16 @@
+﻿@{ 
+    Layout = null;
+}
+
+<div class="sidebar-nav well">
+    <ul class="nav nav-header">
+        @foreach (var dep in ViewBag.Departamentos)
+        {
+            <li class="nav-header">@dep.Nome</li>
+            foreach (var cat in dep.Categorias)
+            {
+                <li>@cat.Nome</li>
+            }
+        }
+    </ul>
+</div>
